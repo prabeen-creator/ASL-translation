@@ -7,12 +7,12 @@ import cv2
 import joblib
 import numpy as np
 
-try:
-    import mediapipe as mp
-    if not hasattr(mp, "solutions"):
-        raise ImportError("Use mediapipe 0.10.21: pip install mediapipe==0.10.21")
-except ImportError:
-    mp = None
+# try:
+#     import mediapipe as mp
+#     if not hasattr(mp, "solutions"):
+#         raise ImportError("Use mediapipe 0.10.21: pip install mediapipe==0.10.21")
+# except ImportError:
+#     mp = None
 
 try:
     import torch
