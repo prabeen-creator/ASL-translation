@@ -5,3 +5,5 @@ numpy<2.0.0
 joblib
 scikit-learn
 torch
+pandas
+wandb
