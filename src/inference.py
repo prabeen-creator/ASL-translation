@@ -49,20 +49,20 @@ def _get_hands():
         raise ImportError(
             "MediaPipe is required for hand detection. Run: pip install mediapipe==0.10.21"
         )
-    # h = mp.solutions.hands.Hands(
-    #     static_image_mode=True, max_num_hands=1, min_detection_confidence=0.3
-    # )
-    # return h
+    h = mp.solutions.hands.Hands(
+        static_image_mode=True, max_num_hands=1, min_detection_confidence=0.3
+    )
+    return h
 
-    try:
-        h = mp.solutions.hands.Hands(
-            static_image_mode=True, 
-            max_num_hands=1, 
-            min_detection_confidence=0.3
-        )
-        return h
-    except Exception as e:
-        raise RuntimeError(f"Failed to initialize MediaPipe: {e}. Check your packages.txt for libgl1.")
+    # try:
+    #     h = mp.solutions.hands.Hands(
+    #         static_image_mode=True, 
+    #         max_num_hands=1, 
+    #         min_detection_confidence=0.3
+    #     )
+    #     return h
+    # except Exception as e:
+    #     raise RuntimeError(f"Failed to initialize MediaPipe: {e}. Check your packages.txt for libgl1.")
 
 
 def extract_features(image_bgr):
