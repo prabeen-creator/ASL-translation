@@ -1,7 +1,4 @@
-numpy
-opencv-python-headless
-mediapipe==0.10.21
-scikit-learn
-joblib
 streamlit
-# torch only if used
+mediapipe>=0.10.0
+opencv-python-headless
+numpy<2.0.0
