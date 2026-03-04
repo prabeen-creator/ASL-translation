@@ -31,6 +31,9 @@ y_pred = clf.predict(X_test)
 print(f"Accuracy: {accuracy_score(y_test, y_pred) * 100:.2f}%")
 print(classification_report(y_test, y_pred))
 
-# 6. save the model for later use in cpp
-joblib.dump(clf, 'asl_svm_model.pkl')
+# 6. save the model for deployment (dashboard loads from models/)
+import os
+os.makedirs('models', exist_ok=True)
+joblib.dump(clf, 'models/asl_svm_model.pkl')
+print("Model saved to models/asl_svm_model.pkl")
 
