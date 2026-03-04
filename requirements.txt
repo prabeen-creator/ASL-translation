@@ -1,0 +1,8 @@
+# ASL Letter Recognition - Dashboard & training
+numpy
+opencv-python
+mediapipe==0.10.21
+scikit-learn
+joblib
+torch
+streamlit
