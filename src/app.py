@@ -154,22 +154,40 @@ with col_results:
     letter_svm = conf_svm = None
     letter_nn = conf_nn = None
 
+    # if svm_ok:
+    #     try:
+    #         with st.spinner("SVM..."):
+    #             letter_svm, conf_svm = predict_svm(img, svm_model)
+    #     except ImportError:
+    #         st.error("MediaPipe required")
+    #         st.code("pip install mediapipe==0.10.21", language="bash")
+    #         letter_svm, conf_svm = None, None
+
+    # if nn_ok:
+    #     try:
+    #         with st.spinner("Neural Network..."):
+    #             letter_nn, conf_nn = predict_nn(img, nn_model, label_encoder)
+    #     except ImportError:
+    #         st.error("MediaPipe required")
+    #         st.code("pip install mediapipe==0.10.21", language="bash")
+    #         letter_nn, conf_nn = None, None
+
+    
     if svm_ok:
         try:
             with st.spinner("SVM..."):
                 letter_svm, conf_svm = predict_svm(img, svm_model)
-        except ImportError:
-            st.error("MediaPipe required")
-            st.code("pip install mediapipe==0.10.21", language="bash")
+        except Exception as e:
+            st.error(f"SVM Error: {e}")
             letter_svm, conf_svm = None, None
+
 
     if nn_ok:
         try:
             with st.spinner("Neural Network..."):
                 letter_nn, conf_nn = predict_nn(img, nn_model, label_encoder)
-        except ImportError:
-            st.error("MediaPipe required")
-            st.code("pip install mediapipe==0.10.21", language="bash")
+        except Exception as e:
+            st.error(f"Neural Network Error: {e}")
             letter_nn, conf_nn = None, None
 
     # Primary display: NN-only, simple text
