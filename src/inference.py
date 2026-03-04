@@ -15,6 +15,11 @@ import numpy as np
 #     mp = None
 
 try:
+    import mediapipe as mp
+except ImportError:
+    mp = None
+    
+try:
     import torch
     import torch.nn as nn
 except ImportError:
