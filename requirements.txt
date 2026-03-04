@@ -1,7 +1,7 @@
 # ASL Letter Recognition - Dashboard & training
 numpy
 opencv-python-headless
-mediapipe
+mediapipe==0.10.21
 scikit-learn
 joblib
 torch
