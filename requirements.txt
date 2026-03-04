@@ -1,6 +1,6 @@
 # ASL Letter Recognition - Dashboard & training
 numpy
-opencv-python
+opencv-python-headless
 mediapipe
 scikit-learn
 joblib
