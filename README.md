@@ -27,7 +27,7 @@ There's a real communication gap between ASL users and people who don't know sig
 
 [Sign Language MNIST — Kaggle]([https://www.kaggle.com/datasets/datamunge/sign-language-mnis](https://www.kaggle.com/datasets/signnteam/asl-sign-language-pictures-minus-j-z)t)
 
-25 classes covering A–Z, excluding J and Z since those require motion. Images are processed into 21 hand landmark coordinates using MediaPipe, giving us 42 features per image.
+24 classes covering A–Z, excluding J and Z since those require motion. Images are processed into 21 hand landmark coordinates using MediaPipe, giving us 42 features per image.
 
 ---
 
@@ -50,7 +50,7 @@ We started with an SVM using a linear kernel. It works well with structured nume
 
 ## Week 2 — Neural Network (MLP with PyTorch)
 
-We built a Multi-Layer Perceptron from scratch. The architecture takes 42 features as input, passes them through hidden layers, and outputs a probability distribution over 25 letters using softmax. We used Adam optimizer and Cross-Entropy loss.
+We built a Multi-Layer Perceptron from scratch. The architecture takes 42 features as input, passes them through hidden layers, and outputs a probability distribution over 24 letters using softmax. We used Adam optimizer and Cross-Entropy loss.
 
 To find the best configuration, we ran experiments varying hidden layer sizes (64, 128, 256) and activation functions (ReLU, Tanh, LeakyReLU). All runs were tracked using Weights & Biases.
 
