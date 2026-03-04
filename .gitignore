@@ -2,8 +2,8 @@
 ASL_Training_images/
 data/
 
-# Models
-models/
+#.pkl files
+*.pkl
 
 # Virtual environment
 ml-env/
